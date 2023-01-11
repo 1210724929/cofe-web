@@ -1,0 +1,10 @@
+﻿ *{margin:0;padding:0;}
+        #body{background:url(../img/regist.jpg);width:1400px;height:880px;margin:0 auto;}
+        .right{float:right;width:41px;height:48px;}
+        .right_top{background:url(../img/back.jpg)}
+        .right_top:hover{cursor: pointer;}
+        
+        .regist{width:450px;height:650px;margin:0px 180px 0px 860px;padding-top:160px;
+        }
+        .regist p{display:block;font-size:25px;font-weight:bold;height:20px;width:400px;padding:20px 0px 20px 0px;}
+        .regist .regist_submit{padding:40px 0px 0px 60px;width:100px;height:40px;float:left;}

@@ -1,0 +1,27 @@
+﻿ *{margin:0;padding;}
+        .clear{display: block;overflow: hidden;}
+        
+        .body{width:1300px;margin:0 auto;}
+        .left{width:300px;float:left;}
+        .right{width:1000px;float:left;}
+        .style1
+        {
+            width: 800px;
+        }
+        .style2
+        {
+            width: 374px;
+        }
+        
+        
+        .imgSize{width:100px;height:60px;}
+        .style3
+        {
+            height: 24px;
+        }
+        .style4
+        {
+            width: 374px;
+            height: 24px;
+        }
+        .textinfo{width:374px;height:58px;}

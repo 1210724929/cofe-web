@@ -1,0 +1,17 @@
+﻿  *{margin: 0;padding: 0;}
+     .clear{display: block;overflow: hidden;}
+     body{}
+
+    .center{width: 900px;height:890px;margin: 0 auto;background:#330000;}
+    .center_head{width: 900px;height: 100px;}
+    .center_head h1{display:block; font-family: "Courier New", Courier, monospace;color: #999999;
+	    width: 730px;text-align: center;margin:100px  auto 100px;}
+    .center_left{width: 400px;height: 270px;float: left;margin-left:40px;}
+    .center_left p{text-indent: 2px;color: #fff;}
+    .center_right{width: 370px;height: 270px;margin-left:60px;float: left;}
+    .center_right p{text-indent: 2px;color: #fff;}
+    
+    .center_foot{width:48px;height:41px;float:right;}
+    .center_foot_button{background:url(../img/back.jpg);outline:none;}
+    .center_foot_button:hover{cursor: pointer;}
+   

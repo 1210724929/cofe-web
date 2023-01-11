@@ -1,0 +1,138 @@
+卡布奇诺（Cappuccino）——20世纪初，意大利人阿奇加夏发明蒸汽压力咖啡机的同时，也发展出了卡布奇诺咖啡。卡布奇诺是在偏浓的咖啡上，倒入以蒸汽发泡的牛奶。此时咖啡的颜色，就象卡布奇诺教会的修士在深褐色的外衣上覆上一条头巾一样，咖啡因此而得名。传统的卡布奇诺咖啡是三分之一浓缩咖啡，三分之一蒸汽牛奶和三分之一泡沫牛奶，并在上面撒上小颗粒的肉桂粉末。卡布奇诺咖啡的味道很好，但它的名称来历却更有学问，一直是欧美研究文字变迁的最佳体材。Cappuccino此字的历史，足以说明一个字常常会因为看来像某样东西，最后被引申成其它字义，远远超出造字者原先用意。
+
+<head id="Head1" runat="server">
+    <title>商品介绍</title>
+    <style type="text/css">
+       *{margin: 0;padding: 0;}
+     .clear{display: block;overflow: hidden;}
+     body{}
+
+    .center{width: 900px;height:890px;margin: 0 auto;background:#330000;}
+    .center_head{width: 1000px;height: 100px;}
+    .center_head h1{display:block; font-family: "Courier New", Courier, monospace;color: #999999;
+	    width: 730px;text-align: center;margin:100px  auto 100px;}
+    .center_left{width: 400px;height: 270px;float: left;margin-left:40px;}
+    .center_right{width: 370px;height: 270px;margin-left:60px;float: left;}
+    .center_right p{text-indent: 2px;color: #fff;}
+    
+    .center_foot{width:48px;height:41px;float:right;}
+    .center_foot_button{background:url(img/back.jpg);outline:none;}
+    .center_foot_button:hover{cursor: pointer;}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="clear">
+        <div class="center clear">	
+	
+	    <div class="center_head">		   
+            
+			  <h1><asp:Label ID="Label2" runat="server"></asp:Label></h1>	  
+	    </div>
+	    <div class="center_left">
+           	<asp:Image ID="Image1" runat="server" BorderStyle="None" Width="400px" />	    
+	    </div>
+            
+	    <div class="center_right">
+		    <p>
+                <asp:Label ID="Label1" runat="server"></asp:Label>
+            </p>
+	    </div>
+        <div class="center_foot">
+            <asp:Button ID="Button1" runat="server" BackColor="Transparent" 
+                BorderStyle="None" Height="41px" Width="48px" 
+                CssClass="center_foot_button" onclick="Button1_Click" />
+        </div>
+</div>
+    </div>
+    </form>
+</body>
+
+//获得数据库连接地址
+        protected string getConnectionString()
+        {
+            return WebConfigurationManager.ConnectionStrings["registConnectionString"].ConnectionString;
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {               
+                using (SqlConnection objConn = new SqlConnection(getConnectionString()))
+                {
+                    objConn.Open();
+                    string sql = "select * from PriceInfo WHERE imgID='1'";
+                    SqlCommand cmd = new SqlCommand(sql, objConn);
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    string index="";
+                    string price = "";
+                    string info = "";
+                    while(dr.Read()){
+                        index = dr[0].ToString();
+                        price = dr[1].ToString();
+                        info = dr[2].ToString();
+                        Image1.ImageUrl = "~/img/"+int.Parse(index)+".jpg";
+                        Label1.Text = info;
+                    }             
+                }
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
+
+
+
+
+ <style type="text/css">
+        *{margin:0px;padding:0px;}
+        .clear{display: block;overflow: hidden;}
+        ul{list-style: none;}
+        
+         .button{font-size:15px;outline:none;}
+        .button:hover{cursor: pointer;border-style:outset;color:#f5ea01;}
+        .menu_section .button_nameinfo{text-decoration:underline;color: #99930d;outline:none;}
+        .menu_section .button_nameinfo:hover{cursor: pointer;border-style:outset;color:#f5ea01}
+        
+        .body{width:1000px;margin:0 auto;background:url(img/default6.jpg);}
+        .top{height:200px;background:;}
+        #templatemo_menu_panel{width: 1000px;margin: 0 auto;}
+        .menu_left{height: 200px;width: 200px; overflow: hidden;float: left;transition: all 4s ease-in-out;border-radius: 50%;border: 2px solid #A7A7A7;}
+        .menu_left img{width: 200px;height: 200px;transition: all 4s;border-radius: 50%;}
+        .menu_left img:hover{transform:scale(1.2,1.2);}
+        .menu_left:hover{transform:rotate(25deg); cursor: pointer;  }
+
+        #templatemo_menu_panel .menu_section{height:200px;width: 726px;float: left;padding: 25px 0 0 30px;background: url();}
+        .menu_section ul li{height:45px;width: 200px;margin: 30px 22px 10px 10px;background: url() no-repeat;border-bottom-right-radius:50px; border-top-right-radius:50px;
+	        float: left;display: none;} 
+        .menu_section ul li a{display: block;height:45px;width: 200px;font-size: 14px; text-align: center;line-height: 45px;color: #99930d;}
+        .menu_section ul  a:hover, .menu_section ul .current{color:#f5ea01; }
+        
+        #templatemo_menu_panel:hover .display_hid{opacity:0.6;display:none;}
+        #templatemo_menu_panel:hover  ul li{display: block;}
+        
+        .nav{height:80px;background:;}
+        .nav ul li{width:100px;height:50px;float:right;margin-top:50px;}
+        .nav ul li:hover{cursor: pointer;}
+       
+        .showlist{margin:0 0 0 5px;}
+        .showlist .title{height: 40px;background: url() bottom left no-repeat;
+				line-height: 40px;margin:0 29px 0 20px;}
+		.showlist .title h2{float: left;font-size: 16px;font-family: 微软雅黑;color:#0c0000;}
+		.showlist .title a{display: block;float: right;color:  #1f120a;font-size: 14px;}
+		.showlist .title a:hover{text-decoration: underline;color:#e3daf5;}
+        
+        .showlist{width:1000px;}
+        .showlist ul{float:left;}
+        .showlist ul li img{display: block;height: 210px;width: 210px;margin: 10px auto;border: none;}
+		.showlist ul li{width: 246px;height: 302px;float: left;border: 1px solid #E1E1E1;}
+		.showlist ul li a:hover{text-decoration: underline;cursor: pointer;color:#e7d6f4;}
+        .showlist ul li p{color: #000000;width: 200px;height: 23px;margin: 0 auto;}
+        
+        .fotter{height:48px;background:;}
+        .fotter{color: #3f3b48;text-align: center;}
+		.fotter a{color: #686572;font-size: 12px;}
+		.fotter a:hover{text-decoration: underline;}
+    </style>

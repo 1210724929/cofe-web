@@ -1,0 +1,5 @@
+F:\秦玉\web网站后台_VS\vs编写的程序\Cofe_net\Cofe_net\bin\Cofe_net.dll
+F:\秦玉\web网站后台_VS\vs编写的程序\Cofe_net\Cofe_net\bin\Cofe_net.pdb
+F:\秦玉\web网站后台_VS\vs编写的程序\Cofe_net\Cofe_net\obj\Debug\Cofe_net.dll
+F:\秦玉\web网站后台_VS\vs编写的程序\Cofe_net\Cofe_net\obj\Debug\Cofe_net.pdb
+F:\秦玉\web网站后台_VS\vs编写的程序\Cofe_net\Cofe_net\obj\Debug\Cofe_net.csprojResolveAssemblyReference.cache

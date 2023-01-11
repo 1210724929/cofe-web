@@ -1,0 +1,11 @@
+﻿ body{background:#020202;width:1400px;margin:0 auto;}
+        
+        .login{width:690px;height:430px;background:url(../img/cofe_login.jpg);margin:150px 100px 0px 650px; opacity:0.9; }
+         .login .left{float:left;width:100px;height:100px;background:;margin-top:330px;}
+        .login .left_button{background:url(../img/back.jpg);outline:none;}
+        .login .left_button:hover{cursor: pointer;}
+        
+        h2{display:block;width:690px;height:60px;text-align:center; margin:0 auto;padding:10px auto;font-size:50px;color:#9e4a2d;}
+        .login_form{width:400px;height:300px;float:right;opacity:1;font-size:30px;font-weight:bold;padding-top:50px;}
+        .login_form div{height:50px;padding:40px 0 0 100px;}
+        .login_form .serbit div{margin-left:40px;width:90px;height:50px;padding:0;float:left;}
