@@ -11,4 +11,4 @@
 ### 3 接着点击 导入成功，跳转主页，可以都看到商品页面
 ![image](./readmeImage/%E5%95%86%E5%93%81%E5%B1%95%E7%A4%BA%E9%A1%B5%E9%9D%A2.png)
 ### 4 随便点击一个页面，就可以看到详情   
-![image](./readmeImage/%E5%95%86%E5%93%81%E8%AF%A6%E6%83%85.png)
+![image](./readmeImage/%E5%95%86%E5%93%81%E8%AF%A6%E6%83%85.png)  
